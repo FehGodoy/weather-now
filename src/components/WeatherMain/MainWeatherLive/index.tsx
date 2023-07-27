@@ -57,7 +57,7 @@ const MainWeatherLive = () => {
 						{weatherData && (
 							<div className="iconHas">
 								<Image
-									src={`${weatherData?.current?.condition?.icon}`}
+									src={`https://${weatherData?.current?.condition?.icon}`}
 									alt={weatherData?.current?.condition?.text}
 									width={100}
 									height={100}
@@ -90,7 +90,7 @@ const MainWeatherLive = () => {
 									</div>
 									<div className="temperature">
 										<Image
-											src={`${currentHourData?.condition?.icon}`}
+											src={`https://${currentHourData?.condition?.icon}`}
 											alt={currentHourData?.condition?.text}
 											width={50}
 											height={50}
@@ -112,7 +112,7 @@ const MainWeatherLive = () => {
 										</div>
 										<div className="temperature">
 											<Image
-												src={`${hourData?.condition?.icon}`}
+												src={`https://${hourData?.condition?.icon}`}
 												alt={hourData?.condition?.text}
 												width={50}
 												height={50}
