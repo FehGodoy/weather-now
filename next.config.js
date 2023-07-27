@@ -1,8 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    appDir: true,
-  },
-}
+	reactStrictMode: true,
+	experimental: {
+		forceSwcTransforms: true,
+	},
+	images: {
+		domains: ["cdn.weatherapi.com"],
+	},
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
