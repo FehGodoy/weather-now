@@ -34,8 +34,6 @@ const MainWeatherLive = () => {
 		}
 	);
 
-	console.log("URL ICON: ", `https:${weatherData?.current?.condition?.icon}`);
-
 	return (
 		<>
 			<Styled.HeaderBox>
