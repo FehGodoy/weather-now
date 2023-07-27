@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import * as Styled from "./style";
 import { Clock } from "phosphor-react";
 import useWeatherHook from "@/hooks/useWeatherHook";
@@ -7,10 +7,20 @@ import Image from "next/image";
 
 const MainWeatherLive = () => {
 	const { weatherData } = useWeatherHook();
-	const formattedTime = new Date().toLocaleTimeString("pt-BR", {
-		hour: "2-digit",
-		minute: "2-digit",
-	});
+	const [formattedTime, setFormattedTime] = useState("");
+
+	useEffect(() => {
+		// Obter o horário atual quando o componente é montado
+		const updateTime = () => {
+			const currentTime = new Date().toLocaleString([], {
+				hour: "2-digit",
+				minute: "2-digit",
+			});
+			setFormattedTime(currentTime);
+		};
+
+		updateTime();
+	}, []);
 
 	// Extract only the hour part from currentTime
 	const currentHour = Number(formattedTime.split(":")[0]);
@@ -79,13 +89,10 @@ const MainWeatherLive = () => {
 								<li>
 									<div className="title">
 										<span>
-											{new Date(currentHourData?.time).toLocaleTimeString(
-												"pt-BR",
-												{
-													hour: "2-digit",
-													minute: "2-digit",
-												}
-											)}
+											{new Date(currentHourData?.time).toLocaleString([], {
+												hour: "2-digit",
+												minute: "2-digit",
+											})}
 										</span>
 									</div>
 									<div className="temperature">

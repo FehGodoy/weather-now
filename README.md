@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+![App Screenshot](https://i.imgur.com/CGRwD5W.png)
 
-First, run the development server:
+
+# Weather Now
+
+Weather Now is a web application built in React.js and Next.js with TypeScript, allowing you to check the weather temperature in any city. The app uses the Weather API to get up-to-date weather data.
+
+
+## Installation
+To run this application locally, follow the instructions below:
+
+Clone this repository:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+  git clone https://github.com/FehGodoy/weather-now.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Enter the project directory:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+  cd weather-now
+```
 
-[http://localhost:3000/api/hello](http://localhost:3000/api/hello) is an endpoint that uses [Route Handlers](https://beta.nextjs.org/docs/routing/route-handlers). This endpoint can be edited in `app/api/hello/route.ts`.
+Install the project's dependencies:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```bash
+  npm install
+```
 
-## Learn More
+Start the development server:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+  npm run dev
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Use
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- The main page displays the current temperature of the city of London, as well as weather details such as humidity, wind chill, UV index, wind direction and more.
+- Just below the current temperature, you will see the remaining temperatures throughout the day.
+- To check the weather in another city, use the search bar at the top of the page, on the right side (desktop) and enter the name of the desired city.
+## Technologies Used
 
-## Deploy on Vercel
+- React.js
+- Next.js
+- TypeScript
+- Syled Components
+- Babel
+- Phosphor React
+- Axios
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Some of the features
+
+- Display of current London city temperature as default.
+- Visualization of temperatures at every hour of the day.
+- Weather details including humidity, wind chill, UV index, wind direction, and more.
+- State management using Context API.
+- Responsive design for a pleasant experience on mobile and desktop devices.
+
+## Feedback
+
+If you have any feedback, please let us know at felip.godoy10@gmail.com
+
