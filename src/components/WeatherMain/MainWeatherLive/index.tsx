@@ -57,12 +57,12 @@ const MainWeatherLive = () => {
 						{weatherData && (
 							<div className="iconHas">
 								<Image
-									src={`https://${weatherData.current.condition.icon}`}
-									alt={weatherData.current.condition.text}
+									src={`${weatherData?.current?.condition?.icon}`}
+									alt={weatherData?.current?.condition?.text}
 									width={100}
 									height={100}
 								/>
-								<span>{weatherData.current.condition.text}</span>
+								<span>{weatherData?.current?.condition?.text}</span>
 							</div>
 						)}
 					</div>
@@ -79,7 +79,7 @@ const MainWeatherLive = () => {
 								<li>
 									<div className="title">
 										<span>
-											{new Date(currentHourData.time).toLocaleTimeString(
+											{new Date(currentHourData?.time).toLocaleTimeString(
 												"pt-BR",
 												{
 													hour: "2-digit",
@@ -90,12 +90,12 @@ const MainWeatherLive = () => {
 									</div>
 									<div className="temperature">
 										<Image
-											src={`https://${currentHourData?.condition.icon}`}
-											alt={currentHourData?.condition.text}
+											src={`${currentHourData?.condition?.icon}`}
+											alt={currentHourData?.condition?.text}
 											width={50}
 											height={50}
 										/>
-										<span>{currentHourData.temp_c}º</span>
+										<span>{currentHourData?.temp_c}º</span>
 									</div>
 								</li>
 							)}
@@ -112,12 +112,12 @@ const MainWeatherLive = () => {
 										</div>
 										<div className="temperature">
 											<Image
-												src={`https://${hourData.condition.icon}`}
-												alt={hourData.condition.text}
+												src={`${hourData?.condition?.icon}`}
+												alt={hourData?.condition?.text}
 												width={50}
 												height={50}
 											/>
-											<span>{hourData.temp_c}º</span>
+											<span>{hourData?.temp_c}º</span>
 										</div>
 									</li>
 								))}
